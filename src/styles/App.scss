@@ -1,0 +1,17 @@
+.movie-items .movie-item {
+  width: 30%;
+}
+.slider .slick-multiItemSlider {
+  display: flex;
+}
+.movie-items .movie-item {
+  width: 100%;
+}
+.movie-items .slide-it {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 30%;
+  margin: 5px;
+  min-width: 200px;
+}
