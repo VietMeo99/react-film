@@ -116,7 +116,7 @@ const Header = () => {
               <li className="btn signupLink"><a href="#">sign up</a></li>
             </ul>
           </div>
-          {/* /.navbar-collapse */}
+          {/* /.navbar-collapse */}  
         </nav>
         {/* top search form */}
         <div className="top-search">
