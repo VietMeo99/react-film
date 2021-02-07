@@ -3,7 +3,8 @@ import {Switch, Route, Redirect} from "react-router";
 
 import { PublicLayout } from '../layout/PublicLayout';
 import { Defauult_Path, User_Path } from '../../constants/url';
-// import Loading from './../layout/Loading';
+// import LoginPage from './../authen/LoginPage';
+// import Register from './../authen/Register';
 
 const Home = lazy(() => import("../home/Home"));
 const NotFound = lazy(() => import("../notFound/NotFound"));
@@ -12,7 +13,7 @@ export const ListRoutes = () => {
   return (
     <Switch>
       <Route exact path="/" component={Home} />
-      {/* <Route exact path="/loading" component={Loading} /> */}
+      {/* <Route exact path="/loading" component={Register} /> */}
       <Route exact path="/404.html" component={NotFound} />
       <Redirect to="404.html"/>  
     </Switch> 

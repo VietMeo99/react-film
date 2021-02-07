@@ -31,6 +31,16 @@
     <!-- CSS files -->
     <link rel="stylesheet" href="%PUBLIC_URL%/css/plugins.css">
     <link rel="stylesheet" href="%PUBLIC_URL%/css/style.css">
+    <script>
+      plugins: [
+          // other plugins,
+          new webpack.ProvidePlugin({
+              $: 'jquery',
+              jQuery: 'jquery',
+              'window.jQuery': 'jquery'
+          }),
+      ]
+    </script>
   </head>
   <body class="h-screen">
     <noscript>You need to enable JavaScript to run this app.</noscript>

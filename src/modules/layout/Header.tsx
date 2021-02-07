@@ -1,15 +1,25 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React from 'react';
+import React, { lazy, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
+// import Modal from 'react-awesome-modal';
+const LoginPage =  lazy(() => import('./../authen/LoginPage'));
+const Register =  lazy(() => import('./../authen/Register'));
+var Modal = require("react-awesome-modal").default;
 
 const Header = () => {
+  const [menuMall, setMenuMall] = useState(false);
+  const [modalLogin, setModalLogin] = useState(false);
+  const [modalRegister, setModalRegister] = useState(false);
   return (
-    <header className="ht-header">
+    <React.Fragment>
+    <LoginPage active={modalLogin} handleModal={setModalLogin}/>
+    <Register active={modalRegister} handleModal={setModalRegister}/>
+    <header className="ht-header"> 
       <div className="container">
         <nav className="navbar navbar-default navbar-custom">
           {/* Brand and toggle get grouped for better mobile display */}
           <div className="navbar-header logo">
-            <div className="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <div className="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" onClick={() => setMenuMall(!menuMall)}>
               <span className="sr-only">Toggle navigation</span>
               <div id="nav-icon1">
                 <span />
@@ -20,7 +30,7 @@ const Header = () => {
             <a href="index.html"><img className="logo" src="images/logo1.png" alt="img" width={119} height={58} /></a>
           </div>
           {/* Collect the nav links, forms, and other content for toggling */}
-          <div className="collapse navbar-collapse flex-parent" id="bs-example-navbar-collapse-1">
+          <div className="collapse navbar-collapse flex-parent" id="bs-example-navbar-collapse-1" style={{display: menuMall ? "block" : ""}}>
             <ul className="nav navbar-nav flex-child-menu menu-left">
               <li className="hidden">
                 <a href="#page-top" />
@@ -112,8 +122,8 @@ const Header = () => {
                 </ul>
               </li>
               <li><Link to="/">Help</Link></li>
-              <li className="loginLink"><a href="#">LOG In</a></li>
-              <li className="btn signupLink"><a href="#">sign up</a></li>
+              <li className={modalLogin ? "btn loginLink" : "loginLink"} onClick={() => setModalLogin(true)}><a href="#">LOG In</a></li>
+              <li className={modalRegister ? "btn signupLink" : "signupLink"} onClick={() => setModalRegister(true)}><a href="#">sign up</a></li>
             </ul>
           </div>
           {/* /.navbar-collapse */}  
@@ -127,7 +137,11 @@ const Header = () => {
           <input type="text" placeholder="Search for a movie, TV Show or celebrity that you are looking for" />
         </div>
       </div>
+      {/* <Modal visible={modalLogin} effect="fadeInUp" onClickAway={() => setModalLogin(false)}>
+        <LoginPage active={modalLogin} />
+      </Modal>  */}
     </header>
+    </React.Fragment> 
 
   );
 };
