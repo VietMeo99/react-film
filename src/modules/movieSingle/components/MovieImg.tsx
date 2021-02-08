@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useState } from 'react';
 const ModalVideo = require('react-modal-video').default;
 
@@ -9,9 +10,9 @@ const MovieImg = () => {
       <div className="movie-img sticky-sb" id="sticky-sb" >
         <img src="/images/uploads/movie-single.jpg" alt="img"/>
         <div className="movie-btn">	
-          <div className="btn-transform transform-vertical red">
+          <div className="btn-transform transform-vertical red" onClick={()=> setOpen(true)}>
             <div><a className="item item-1 redbtn"> <i className="ion-play" /> Watch Trailer</a></div>
-            <div><a  onClick={()=> setOpen(true)} className="item item-2 redbtn fancybox-media hvr-grow"><i className="ion-play" /></a></div>
+            <div><a className="item item-2 redbtn fancybox-media hvr-grow"><i className="ion-play" /></a></div>
           </div>
           <div className="btn-transform transform-vertical">
             <div><a href="#" className="item item-1 yellowbtn"> <i className="ion-card" /> Xem Ngay</a></div>
