@@ -64,9 +64,9 @@ const Header = () => {
                 </ul>
               </li>
               <li className="dropdown first">
-                <NavLink exact activeStyle={{// backgroundColor : 'white',
+                <NavLink activeStyle={{// backgroundColor : 'white',
                     color : 'red'}} 
-                    to="/" className="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+                    to="/movies/slug.id.html" className="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
                   movies<i className="fa fa-angle-down" aria-hidden="true" />
                 </NavLink>
                 <ul className="dropdown-menu level1">

@@ -6,6 +6,15 @@ const MovieImg = () => {
   const [isOpen, setOpen] = useState(false);
   return (
     <React.Fragment>
+      {/* <iframe
+        width="100%"
+        height="100%"
+        frameBorder="0"
+        allowFullScreen
+        allow="accelerometer; autoplay; encrypted-media; picture-in-picture"
+        title="Youtube video player"
+        src={`https://www.youtube.com/embed/${videoId}?autoplay=1`}
+      ></iframe> */}
       <ModalVideo channel='youtube' width={50} autoplay isOpen={isOpen} videoId="o-0hcF97wy0" onClose={() => setOpen(false)} />
       <div className="movie-img sticky-sb" id="sticky-sb" >
         <img src="/images/uploads/movie-single.jpg" alt="img"/>

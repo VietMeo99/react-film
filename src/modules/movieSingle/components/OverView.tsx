@@ -7,15 +7,7 @@ const OverView = () => {
   return (
     <React.Fragment>
       {/* https://www.youtube.com/embed/o-0hcF97wy0  L61p2uyiMSo*/}
-      {/* <iframe
-          width="100%"
-          height="100%"
-          frameBorder="0"
-          allowFullScreen
-          allow="accelerometer; autoplay; encrypted-media; picture-in-picture"
-          title="Youtube video player"
-          src={`https://www.youtube.com/embed/${videoId}?autoplay=1`}
-      ></iframe> */}
+
       <ModalVideo channel='youtube' width={50} autoplay isOpen={isOpen} videoId="o-0hcF97wy0" onClose={() => setOpen(false)} />
       {/* <button className="btn-primary" onClick={()=> setOpen(true)}>VIEW DEMO</button> */}
       <div id="overview" style={{display: "block"}} className="tab active">
