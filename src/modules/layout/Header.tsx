@@ -9,9 +9,10 @@ import Register from '../authen/Register';
 
 const handleScrollNav = () => {
   window.addEventListener('scroll', (event) => {
-    if(window.scrollY >= 100){
+    if(window.scrollY > 370){
       document.querySelector(".ht-header")?.classList.add("sticky");
-    }else {
+    }
+    if(window.scrollY < 200) {
       document.querySelector(".ht-header")?.classList.remove("sticky");
     } 
   });
