@@ -1,19 +1,31 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { lazy, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
-// import Modal from 'react-awesome-modal';
-const LoginPage =  lazy(() => import('./../authen/LoginPage'));
-const Register =  lazy(() => import('./../authen/Register'));
-var Modal = require("react-awesome-modal").default;
+import LoginPage from '../authen/LoginPage';
+import Register from '../authen/Register';
+// const LoginPage =  lazy(() => import('./../authen/LoginPage'));
+// const Register =  lazy(() => import('./../authen/Register'));
+// var Modal = require("react-awesome-modal").default;
+
+const handleScrollNav = () => {
+  window.addEventListener('scroll', (event) => {
+    if(window.scrollY >= 100){
+      document.querySelector(".ht-header")?.classList.add("sticky");
+    }else {
+      document.querySelector(".ht-header")?.classList.remove("sticky");
+    } 
+  });
+}
 
 const Header = () => {
   const [menuMall, setMenuMall] = useState(false);
   const [modalLogin, setModalLogin] = useState(false);
   const [modalRegister, setModalRegister] = useState(false);
+  handleScrollNav();
   return (
     <React.Fragment>
-    <LoginPage active={modalLogin} handleModal={setModalLogin}/>
-    <Register active={modalRegister} handleModal={setModalRegister}/>
+    {modalLogin && <LoginPage active={modalLogin} handleModal={setModalLogin}/>}
+    {modalRegister && <Register active={modalRegister} handleModal={setModalRegister}/>}
     <header className="ht-header"> 
       <div className="container">
         <nav className="navbar navbar-default navbar-custom">
@@ -27,7 +39,7 @@ const Header = () => {
                 <span />
               </div>
             </div>
-            <a href="index.html"><img className="logo" src="images/logo1.png" alt="img" width={119} height={58} /></a>
+            <a href="index.html"><img className="logo" src="/images/logo1.png" alt="img" width={119} height={58} /></a>
           </div>
           {/* Collect the nav links, forms, and other content for toggling */}
           <div className="collapse navbar-collapse flex-parent" id="bs-example-navbar-collapse-1" style={{display: menuMall ? "block" : ""}}>

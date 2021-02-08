@@ -1,24 +1,45 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
+import { useForm } from "react-hook-form";
 
 const LoginPage: React.FC<any> = (active) => {
+  const {register, handleSubmit, errors} = useForm();
+  const onSubmit = (data: any) => {
+    console.log("data :", data);
+  }
   return (
     <div className={active.active ? "overlay openform" : "overlay invisible hidden"}>
       <div className="login-wrapper" id="login-content">
         <div className="login-content">
-          <p style={{color: "#000", display: "block"}} className="close" onClick={() => active.handleModal(false)}>x</p>
+          <p style={{color: "#000", display: "block"}} className="close absolute top-0 right-0" onClick={() => active.handleModal(false)}>x</p>
           <h3>Login</h3>
-          <form method="post" action="login.php">
+          <form onSubmit={handleSubmit(onSubmit)}>
             <div className="row">
-              <label htmlFor="username">
+              <label htmlFor="username-2">
                 Username:
-                <input type="text" name="username" id="username" placeholder="Hugh Jackman" pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{8,20}$" required autoComplete="off" style={{ backgroundImage: 'url("data:image/png', backgroundRepeat: 'no-repeat', backgroundAttachment: 'scroll', backgroundSize: '16px 18px', backgroundPosition: '98% 50%', cursor: 'auto' }} />
+                <input type="text" name="username" id="username-2" placeholder="Your Username ..."
+                  required
+                  ref={register({ 
+                    pattern: /^.{5,20}$/,
+                  })} 
+                />
+                {errors.username && errors.username.type === "pattern" &&  (
+                  <p className="perror">Username phải có từ 5 đến 20 kí tự</p>
+                )}
               </label>
             </div>
             <div className="row">
-              <label htmlFor="password">
+              <label htmlFor="password-2">
                 Password:
-                <input type="password" name="password" id="password" placeholder="******" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required autoComplete="off" style={{ backgroundImage: 'url("data:image/png', backgroundRepeat: 'no-repeat', backgroundAttachment: 'scroll', backgroundSize: '16px 18px', backgroundPosition: '98% 50%' }} />
+                <input type="password" name="password" id="password-2" placeholder="*****" 
+                  required 
+                  ref={register({ 
+                    pattern: /^(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/
+                  })}
+                />
+                {errors.password && errors.password.type === "pattern" && (
+                  <p className="perror">Password phải tối thiểu tám ký tự, ít nhất một chữ cái, một số và một ký tự đặc biệ</p>
+                )}
               </label>
             </div>
             <div className="row">
@@ -30,7 +51,7 @@ const LoginPage: React.FC<any> = (active) => {
               </div>
             </div>
             <div className="row">
-              <button type="submit">Login</button>
+              <button type="submit" onClick={onSubmit}>Login</button>
             </div>
           </form>
           <div className="row">

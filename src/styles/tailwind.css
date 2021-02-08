@@ -13,3 +13,11 @@
 /* Stop purging. */
 
 /* Your own custom utilities */
+@layer components {
+  .flex-center {
+    @apply flex justify-center;
+  }
+  .perror {
+    @apply text-red-500 my-1 !important;
+  }
+}

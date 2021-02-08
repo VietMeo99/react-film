@@ -3,17 +3,16 @@ import {Switch, Route, Redirect} from "react-router";
 
 import { PublicLayout } from '../layout/PublicLayout';
 import { Defauult_Path, User_Path } from '../../constants/url';
-// import LoginPage from './../authen/LoginPage';
-// import Register from './../authen/Register';
-
+ 
 const Home = lazy(() => import("../home/Home"));
+const MovieSingle = lazy(() => import("../movieSingle/MovieSingle"));
 const NotFound = lazy(() => import("../notFound/NotFound"));
 
 export const ListRoutes = () => {
-  return (
+  return (  
     <Switch>
       <Route exact path="/" component={Home} />
-      {/* <Route exact path="/loading" component={Register} /> */}
+      <Route exact path="/movies/:slug.:id.html" component={MovieSingle} />
       <Route exact path="/404.html" component={NotFound} />
       <Redirect to="404.html"/>  
     </Switch> 

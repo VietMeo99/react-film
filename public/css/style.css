@@ -6904,6 +6904,7 @@ p.ceb-single {
   border: 1px solid #e1e1e1;
   height: auto;
   background-color: #ffffff;
+  position: relative;
 }
 @media (max-width: 767px) {
   .overlay .login-content {

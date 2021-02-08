@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
 import { Link } from 'react-router-dom';
 import AliceCarousel from 'react-alice-carousel';
@@ -6,86 +7,116 @@ import 'react-alice-carousel/lib/alice-carousel.css';
 const SliderMoviesItems = () => {
   const responsive: any = {
     0: { items: 1 },
-    568: { items: 2 },
-    1024: { items: 9 },
+    568: { items: 3 },
+    768: { items: 4 },
+    1024: { items: 5 },
   };
   const handleDragStart = (e: any) => e.preventDefault();
   const items = [
-    <div className="movie-item p-3" onDragStart={handleDragStart} >
-      <div className="mv-img">
-        <a href="#"><img src="images/uploads/slider1.jpg" alt="img"/></a>
-      </div>
+    <div className="movie-item p-3">
+    {/* <div className="movie-item p-3" onDragStart={handleDragStart}> */}
+      <Link to="/movies/slug.id.html">
+        <div className="mv-img">
+          <img src="images/uploads/slider1.jpg" alt="img"/>
+        </div>
+      </Link>
       <div className="title-in">
         <div className="cate">
           <span className="blue"><a href="#">Sci-fi</a></span>
         </div>
-        <h6><a href="#">Interstellar</a></h6>
+        <h6><Link to="/movies/slug.id.html">Interstellar</Link></h6>
         <p><i className="ion-android-star" /><span>7.4</span> /10</p>
       </div>
     </div>
-    ,<div className="movie-item p-3" onDragStart={handleDragStart}>
-      <div className="mv-img">
-        <a href="#"><img src="images/uploads/slider2.jpg" alt="img"/></a>
-      </div>
+    ,<div className="movie-item p-3">
+      <Link to="/movies/slug.id.html">
+        <div className="mv-img">
+            <img src="images/uploads/slider2.jpg" alt="img"/>
+        </div>
+      </Link>
       <div className="title-in">
         <div className="cate">
           <span className="yell"><a href="#">action</a></span>
         </div>
-        <h6><a href="#">The revenant</a></h6>
+        <h6><Link to="/movies/slug.id.html">The revenant</Link></h6>
         <p><i className="ion-android-star" /><span>7.4</span> /10</p>
       </div>
     </div>
-    ,<div className="movie-item p-3" onDragStart={handleDragStart}>
-     <div className="mv-img">
-       <a href="#"><img src="images/uploads/slider4.jpg" alt="img"/></a>
-     </div>
+    ,<div className="movie-item p-3">
+      <Link to="/movies/slug.id.html">
+        <div className="mv-img">
+            <img src="images/uploads/slider4.jpg" alt="img"/>
+        </div>
+      </Link>
      <div className="title-in">
        <div className="cate">
          <span className="blue"><a href="#">Sci-fi</a></span> <span className="orange"><a href="#">advanture</a></span>
        </div>
-       <h6><a href="#">The walk</a></h6>
+       <h6><Link to="/movies/slug.id.html">The walk</Link></h6>
        <p><i className="ion-android-star" /><span>7.4</span> /10</p>
      </div>
    </div>
-    ,<div className="movie-item p-3" onDragStart={handleDragStart}>
+    ,<div className="movie-item p-3">
+      <Link to="/movies/slug.id.html">
       <div className="mv-img">
-        <a href="#"><img src="images/uploads/slider1.jpg" alt="img"/></a>
+          <img src="images/uploads/slider1.jpg" alt="img"/>
       </div>
+      </Link>
       <div className="title-in">
         <div className="cate">
           <span className="blue"><a href="#">Sci-fi</a></span>
         </div>
-        <h6><a href="#">Interstellar</a></h6>
+        <h6><Link to="/movies/slug.id.html">Interstellar</Link></h6>
         <p><i className="ion-android-star" /><span>7.4</span> /10</p>
       </div>
     </div>
-    ,<div className="movie-item p-3" onDragStart={handleDragStart}>
-      <div className="mv-img">
-        <a href="#"><img src="images/uploads/slider3.jpg" alt="img"/></a>
-      </div>
+    ,<div className="movie-item p-3">
+      <Link to="/movies/slug.id.html">
+        <div className="mv-img">
+            <img src="images/uploads/slider3.jpg" alt="img"/>
+        </div>
+      </Link>
       <div className="title-in">
         <div className="cate">
           <span className="yell"><a href="#">action</a></span>
         </div>
-        <h6><a href="#">The revenant</a></h6>
+        <h6><Link to="/movies/slug.id.html">The revenant</Link></h6>
         <p><i className="ion-android-star" /><span>7.4</span> /10</p>
       </div>
     </div>
-    ,<div className="movie-item p-3" onDragStart={handleDragStart}>
-      <div className="mv-img">
-        <img src="images/uploads/slider3.jpg" alt="img"/>
-      </div>
+    ,<div className="movie-item p-3">
+      <Link to="/movies/slug.id.html">
+        <div className="mv-img">
+            <img src="images/uploads/slider3.jpg" alt="img"/>
+        </div>
+      </Link>
       <div className="title-in">
         <div className="cate">
           <span className="green"><a href="#">comedy</a></span>
         </div>
-        <h6><a href="#">Die hard</a></h6>
+        <h6><Link to="/movies/slug.id.html">Die hard</Link></h6>
         <p><i className="ion-android-star" /><span>7.4</span> /10</p>
       </div>
     </div>
-    ,<div className="movie-item p-3" onDragStart={handleDragStart}>
+    ,<div className="movie-item p-3">
+        <Link to="/movies/slug.id.html">
+          <div className="mv-img">
+              <img src="images/uploads/slider2.jpg" alt="img"/>
+          </div>
+        </Link>
+      <div className="title-in">
+        <div className="cate">
+          <span className="blue"><a href="#">Sci-fi</a></span> <span className="orange"><a href="#">advanture</a></span>
+        </div>
+        <h6><Link to="/movies/slug.id.html">The walk</Link></h6>
+        <p><i className="ion-android-star" /><span>7.4</span> /10</p>
+      </div>
+    </div>
+    ,<div className="movie-item p-3">
       <div className="mv-img">
-        <img src="images/uploads/slider2.jpg" alt="img"/>
+        <Link to="/movies/slug.id.html">
+          <img src="images/uploads/slider4.jpg" alt="img"/>
+        </Link>
       </div>
       <div className="title-in">
         <div className="cate">
@@ -95,9 +126,12 @@ const SliderMoviesItems = () => {
         <p><i className="ion-android-star" /><span>7.4</span> /10</p>
       </div>
     </div>
-    ,<div className="movie-item p-3" onDragStart={handleDragStart}>
+    ,<div className="movie-item p-3">
+    {/* ,<div className="movie-item p-3" onDragStart={handleDragStart}> */}
       <div className="mv-img">
-        <img src="images/uploads/slider4.jpg" alt="img"/>
+        <Link to="/movies/slug.id.html">
+          <img src="images/uploads/slider1.jpg" alt="img"/>
+        </Link>
       </div>
       <div className="title-in">
         <div className="cate">
@@ -107,9 +141,12 @@ const SliderMoviesItems = () => {
         <p><i className="ion-android-star" /><span>7.4</span> /10</p>
       </div>
     </div>
-    ,<div className="movie-item p-3" onDragStart={handleDragStart}>
+    ,<div className="movie-item p-3">
+    {/* ,<div className="movie-item p-3" onDragStart={handleDragStart}> */}
       <div className="mv-img">
-        <img src="images/uploads/slider1.jpg" alt="img"/>
+        <Link to="/movies/slug.id.html">
+          <img src="images/uploads/slider2.jpg" alt="img"/>
+        </Link>
       </div>
       <div className="title-in">
         <div className="cate">
@@ -119,9 +156,12 @@ const SliderMoviesItems = () => {
         <p><i className="ion-android-star" /><span>7.4</span> /10</p>
       </div>
     </div>
-    ,<div className="movie-item p-3" onDragStart={handleDragStart}>
+    ,<div className="movie-item p-3">
+    {/* ,<div className="movie-item p-3" onDragStart={handleDragStart}> */}
       <div className="mv-img">
-        <img src="images/uploads/slider2.jpg" alt="img"/>
+        <Link to="/movies/slug.id.html">
+          <img src="images/uploads/slider4.jpg" alt="img"/>
+        </Link>
       </div>
       <div className="title-in">
         <div className="cate">
@@ -131,9 +171,12 @@ const SliderMoviesItems = () => {
         <p><i className="ion-android-star" /><span>7.4</span> /10</p>
       </div>
     </div>
-    ,<div className="movie-item p-3" onDragStart={handleDragStart}>
+    ,<div className="movie-item p-3">
+    {/* ,<div className="movie-item p-3" onDragStart={handleDragStart}> */}
       <div className="mv-img">
-        <img src="images/uploads/slider4.jpg" alt="img"/>
+        <Link to="/movies/slug.id.html">
+          <img src="images/uploads/slider1.jpg" alt="img"/>
+        </Link>
       </div>
       <div className="title-in">
         <div className="cate">
@@ -143,21 +186,12 @@ const SliderMoviesItems = () => {
         <p><i className="ion-android-star" /><span>7.4</span> /10</p>
       </div>
     </div>
-    ,<div className="movie-item p-3" onDragStart={handleDragStart}>
+    ,<div className="movie-item p-3">
+    {/* ,<div className="movie-item p-3" onDragStart={handleDragStart}> */}
       <div className="mv-img">
-        <img src="images/uploads/slider1.jpg" alt="img"/>
-      </div>
-      <div className="title-in">
-        <div className="cate">
-          <span className="blue"><a href="#">Sci-fi</a></span> <span className="orange"><a href="#">advanture</a></span>
-        </div>
-        <h6><a href="#">The walk</a></h6>
-        <p><i className="ion-android-star" /><span>7.4</span> /10</p>
-      </div>
-    </div>
-    ,<div className="movie-item p-3" onDragStart={handleDragStart}>
-      <div className="mv-img">
-        <img src="images/uploads/slider4.jpg" alt="img"/>
+        <Link to="/movies/slug.id.html">
+          <img src="images/uploads/slider4.jpg" alt="img"/>
+        </Link>
       </div>
       <div className="title-in">
         <div className="cate">
@@ -183,7 +217,7 @@ const SliderMoviesItems = () => {
             </div>
             <AliceCarousel 
               autoPlay={true} mouseTracking items={items} responsive={responsive} 
-              autoPlayControls={false} disableDotsControls={true} infinite={true} autoPlayInterval={500}
+              autoPlayControls={false} disableDotsControls={true} infinite={true} autoPlayInterval={3000}
             />
           </div>
         </div>
