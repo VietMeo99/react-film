@@ -139,12 +139,12 @@ const OverView = () => {
           </div>
           <div className="sb-it">
             <h6>Plot Keywords:</h6>
-            <p className="tags">
-              <span className="time"><a href="#">superhero</a></span>
-              <span className="time"><a href="#">marvel universe</a></span>
-              <span className="time"><a href="#">comic</a></span>
-              <span className="time"><a href="#">blockbuster</a></span>
-              <span className="time"><a href="#">final battle</a></span>
+            <p className="tags flex flex-wrap">
+              <span className="time m-3"><a href="#">superhero</a></span>
+              <span className="time m-3"><a href="#">marvel universe</a></span>
+              <span className="time m-3"><a href="#">comic</a></span>
+              <span className="time m-3"><a href="#">blockbuster</a></span>
+              <span className="time m-3"><a href="#">final battle</a></span>
             </p>
           </div>
           <div className="ads">
