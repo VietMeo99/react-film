@@ -1,15 +1,69 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import OverView from './components/OverView';
 import Reviews from './components/Reviews';
 import Cast from './components/Cast';
 import Media from './components/Media';
 import MoviesRelated from './components/MoviesRelated';
+import MovieImg from './components/MovieImg';
+
+// const handleMovieImgMain = () => {
+//   window.addEventListener('scroll', (event) => {
+
+//   });
+//   var windowWidth = window.innerWidth;
+//   console.log("width : ", windowWidth);
+//   if(windowWidth > 1024){
+// 		var stickySidebar: any = document.getElementById('sticky-sb');
+// 		var mainCt: any = document.getElementById('main-content');
+// 		if (stickySidebar.length > 0) {	
+// 			var stickyHeight = stickySidebar?.offsetHeight,
+// 			sidebarTop = stickySidebar.offsetTop;
+// 		}
+// 		// on scroll move the sidebar 
+// 		window.addEventListener('scroll', (event) => {
+// 		  if (stickySidebar.length > 0) {	
+// 		    var scrollTop = document.body.scrollTop;  
+		            
+// 		    if (sidebarTop < scrollTop) {
+// 		      stickySidebar.css('top', scrollTop - sidebarTop + 80);
+// 		      // stop the sticky sidebar at the footer to avoid overlapping
+// 		      var sidebarBottom = stickySidebar.offsetTop + stickyHeight, 
+// 		        stickyStop = mainCt.offsetTop + mainCt?.offsetHeight;
+// 		      if (stickyStop < sidebarBottom) {
+// 		        var stopPosition = mainCt?.offsetHeight - stickyHeight + 130;
+// 		        stickySidebar.style.top = stopPosition;
+// 		      }
+// 		    }
+// 		    else {
+//           stickySidebar.style.top = 0;
+// 		    } 
+// 		  }
+// 		});
+// 		window.addEventListener('resize', () => {
+// 		  if (stickySidebar.length > 0) {	
+// 		    stickyHeight = stickySidebar.height();
+// 		  }
+// 		});
+// 	}
+// } 
+var windowWidth = window.innerWidth;
 
 const MovieSingle = () => { 
   const [optionInfo, setOptionInfo] = useState<number>(0);
   const [idMovie, setIdMovie] = useState<number>(0);
+  const [topSticky, setTopSticky] = useState<number>(0);
+  const handleMovieImgMain = () => {
+    window.addEventListener('scroll', (event) => {
+      var scrollTop = document.body.scrollTop
+      setTopSticky(scrollTop + 130);
+      if(windowWidth > 1020 && scrollTop > 100){
+      }
+    });
+    return topSticky;
+  }
   useEffect(() => {
+    // handleMovieImgMain();
     const pathname = window.location.pathname;
     const match = pathname.match(/\d+.html$/);
     if (match) {
@@ -35,22 +89,10 @@ const MovieSingle = () => {
         <div className="container">
           <div className="row ipad-width2">
             <div className="col-md-4 col-sm-12 col-xs-12">
-              <div className="movie-img sticky-sb">
-                <img src="/images/uploads/movie-single.jpg" alt="img"/>
-                <div className="movie-btn">	
-                  <div className="btn-transform transform-vertical red">
-                    <div><a href="#" className="item item-1 redbtn"> <i className="ion-play" /> Watch Trailer</a></div>
-                    <div><a href="https://www.youtube.com/embed/o-0hcF97wy0" className="item item-2 redbtn fancybox-media hvr-grow"><i className="ion-play" /></a></div>
-                  </div>
-                  <div className="btn-transform transform-vertical">
-                    <div><a href="#" className="item item-1 yellowbtn"> <i className="ion-card" /> Buy ticket</a></div>
-                    <div><a href="#" className="item item-2 yellowbtn"><i className="ion-card" /></a></div>
-                  </div>
-                </div>
-              </div>
+              <MovieImg />
             </div>
             <div className="col-md-8 col-sm-12 col-xs-12">
-              <div className="movie-single-ct main-content">
+              <div className="movie-single-ct main-content" id="main-content">
                 <h1 className="bd-hd">Skyfall: Quantum of Spectre <span>2015</span></h1>
                 <div className="social-btn">
                   <a href="#" className="parent-btn"><i className="ion-heart" /> Add to Favorite</a>
@@ -107,6 +149,7 @@ const MovieSingle = () => {
           </div>
         </div>
       </div>
+    
     </React.Fragment>
 
   );

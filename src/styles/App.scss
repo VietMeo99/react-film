@@ -1,3 +1,4 @@
+@import 'node_modules/react-modal-video/scss/modal-video.scss';
 
 .slider .slick-multiItemSlider {
   display: flex;
@@ -65,6 +66,9 @@
   .alice-carousel__next-btn {
     right: 10px;
   } 
+  .tabs ul.tabs-mv li a {
+    font-size: 15px;
+  }
 }
 @media only screen and (max-width: 768px){
   .overlay .login-content{

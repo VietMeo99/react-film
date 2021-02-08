@@ -2,7 +2,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import AliceCarousel from 'react-alice-carousel';
-import 'react-alice-carousel/lib/alice-carousel.css';
+
 
 const SliderMoviesItems = () => {
   const responsive: any = {
@@ -11,7 +11,7 @@ const SliderMoviesItems = () => {
     768: { items: 4 },
     1024: { items: 5 },
   };
-  const handleDragStart = (e: any) => e.preventDefault();
+  // const handleDragStart = (e: any) => e.preventDefault();
   const items = [
     <div className="movie-item p-3">
     {/* <div className="movie-item p-3" onDragStart={handleDragStart}> */}
@@ -217,7 +217,7 @@ const SliderMoviesItems = () => {
             </div>
             <AliceCarousel 
               autoPlay={true} mouseTracking items={items} responsive={responsive} 
-              autoPlayControls={false} disableDotsControls={true} infinite={true} autoPlayInterval={3000}
+              autoPlayControls={false} disableDotsControls={true} infinite={true} autoPlayInterval={2300}
             />
           </div>
         </div>
