@@ -73,3 +73,16 @@ export const callApi = async (endpoint: string, method: any, body: any, isNeedAu
   }
   return response;
 }
+
+export const api = axios.post("https://bilutvzz.net/ajax/player", {
+  "id": 17832,
+  "ep": 225902
+})
+.then(function (response) {
+  console.log(response);
+  return response;
+})
+.catch(function (error) {
+  console.log(error);
+  return error;
+});
