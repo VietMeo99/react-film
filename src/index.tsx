@@ -7,13 +7,16 @@ import './styles/index.css';
 import App from './App';
 import store from './store';
 import Loading from "./modules/layout/Loading";
+import { ToastProvider } from 'react-toast-notifications';
 
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
-    <Suspense fallback={<Loading />}>
-      <App />
-    </Suspense>
+      <Suspense fallback={<Loading />}>
+      <ToastProvider autoDismissTimeout={2500} >
+        <App />
+      </ToastProvider>
+      </Suspense>
     </Provider> 
   </React.StrictMode>
   ,document.getElementById('root')

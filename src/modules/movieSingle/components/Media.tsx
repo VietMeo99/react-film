@@ -18,7 +18,7 @@ const Media = () => {
           <div className="vd-item">
             <div className="vd-it">
               <img className="vd-img" src="/images/uploads/vd-item1.jpg" alt="img"/>
-              <a className="fancybox-media hvr-grow" href="https://www.youtube.com/embed/o-0hcF97wy0"><img src="/images/uploads/play-vd.png" alt="img"/></a>
+              <a className="fancybox-media hvr-grow" href="https://www.youtube.com/embed/3Zh6aSA0Nl0"><img src="/images/uploads/play-vd.png" alt="img"/></a>
             </div>
             <div className="vd-infor">
               <h6> <a href="#">Trailer:  Watch New Scenes</a></h6>
@@ -28,7 +28,7 @@ const Media = () => {
           <div className="vd-item">
             <div className="vd-it">
               <img className="vd-img" src="/images/uploads/vd-item2.jpg" alt="img"/>
-              <a className="fancybox-media hvr-grow" href="https://www.youtube.com/embed/o-0hcF97wy0"><img src="/images/uploads/play-vd.png" alt="img"/></a>
+              <a className="fancybox-media hvr-grow" href="https://www.youtube.com/embed/3Zh6aSA0Nl0"><img src="/images/uploads/play-vd.png" alt="img"/></a>
             </div>
             <div className="vd-infor">
               <h6> <a href="#">Featurette: “Avengers Re-Assembled</a></h6>
@@ -38,7 +38,7 @@ const Media = () => {
           <div className="vd-item">
             <div className="vd-it">
               <img className="vd-img" src="/images/uploads/vd-item3.jpg" alt="img"/>
-              <a className="fancybox-media hvr-grow" href="https://www.youtube.com/embed/o-0hcF97wy0"><img src="/images/uploads/play-vd.png" alt="img"/></a>
+              <a className="fancybox-media hvr-grow" href="https://www.youtube.com/embed/3Zh6aSA0Nl0"><img src="/images/uploads/play-vd.png" alt="img"/></a>
             </div>
             <div className="vd-infor">
               <h6> <a href="#">Interview: Robert Downey Jr</a></h6>
@@ -48,7 +48,7 @@ const Media = () => {
           <div className="vd-item">
             <div className="vd-it">
               <img className="vd-img" src="/images/uploads/vd-item4.jpg" alt="img"/>
-              <a className="fancybox-media hvr-grow" href="https://www.youtube.com/embed/o-0hcF97wy0"><img src="/images/uploads/play-vd.png" alt="img"/></a>
+              <a className="fancybox-media hvr-grow" href="https://www.youtube.com/embed/3Zh6aSA0Nl0"><img src="/images/uploads/play-vd.png" alt="img"/></a>
             </div>
             <div className="vd-infor">
               <h6> <a href="#">Interview: Scarlett Johansson</a></h6>
@@ -58,7 +58,7 @@ const Media = () => {
           <div className="vd-item">
             <div className="vd-it">
               <img className="vd-img" src="/images/uploads/vd-item1.jpg" alt="img"/>
-              <a className="fancybox-media hvr-grow" href="https://www.youtube.com/embed/o-0hcF97wy0"><img src="/images/uploads/play-vd.png" alt="img"/></a>
+              <a className="fancybox-media hvr-grow" href="https://www.youtube.com/embed/3Zh6aSA0Nl0"><img src="/images/uploads/play-vd.png" alt="img"/></a>
             </div>
             <div className="vd-infor">
               <h6> <a href="#">Featurette: Meet Quicksilver &amp; The Scarlet Witch</a></h6>
@@ -68,7 +68,7 @@ const Media = () => {
           <div className="vd-item">
             <div className="vd-it">
               <img className="vd-img" src="/images/uploads/vd-item2.jpg" alt="img"/>
-              <a className="fancybox-media hvr-grow" href="https://www.youtube.com/embed/o-0hcF97wy0"><img src="/images/uploads/play-vd.png" alt="img"/></a>
+              <a className="fancybox-media hvr-grow" href="https://www.youtube.com/embed/3Zh6aSA0Nl0"><img src="/images/uploads/play-vd.png" alt="img"/></a>
             </div>
             <div className="vd-infor">
               <h6> <a href="#">Interview: Director Joss Whedon</a></h6>
@@ -78,7 +78,7 @@ const Media = () => {
           <div className="vd-item">
             <div className="vd-it">
               <img className="vd-img" src="/images/uploads/vd-item3.jpg" alt="img"/>
-              <a className="fancybox-media hvr-grow" href="https://www.youtube.com/embed/o-0hcF97wy0"><img src="/images/uploads/play-vd.png" alt="img"/></a>
+              <a className="fancybox-media hvr-grow" href="https://www.youtube.com/embed/3Zh6aSA0Nl0"><img src="/images/uploads/play-vd.png" alt="img"/></a>
             </div>
             <div className="vd-infor">
               <h6> <a href="#">Interview: Mark Ruffalo</a></h6>
@@ -88,7 +88,7 @@ const Media = () => {
           <div className="vd-item">
             <div className="vd-it">
               <img className="vd-img" src="/images/uploads/vd-item4.jpg" alt="img"/>
-              <a className="fancybox-media hvr-grow" href="https://www.youtube.com/embed/o-0hcF97wy0"><img src="/images/uploads/play-vd.png" alt="img"/></a>
+              <a className="fancybox-media hvr-grow" href="https://www.youtube.com/embed/3Zh6aSA0Nl0"><img src="/images/uploads/play-vd.png" alt="img"/></a>
             </div>
             <div className="vd-infor">
               <h6> <a href="#">Official Trailer #2</a></h6>

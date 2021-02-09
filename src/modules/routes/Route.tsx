@@ -6,6 +6,7 @@ import { Defauult_Path, User_Path } from '../../constants/url';
  
 const Home = lazy(() => import("../home/Home"));
 const MovieSingle = lazy(() => import("../movieSingle/MovieSingle"));
+const MovieMain = lazy(() => import("../movieMain/MovieItem"));
 const NotFound = lazy(() => import("../notFound/NotFound"));
 
 export const ListRoutes = () => {
@@ -13,6 +14,7 @@ export const ListRoutes = () => {
     <Switch>
       <Route exact path="/" component={Home} />
       <Route exact path="/movies/:slug.:id.html" component={MovieSingle} />
+      <Route exact path="/movie/:slug.:id.html" component={MovieMain} />
       <Route exact path="/404.html" component={NotFound} />
       <Redirect to="404.html"/>  
     </Switch> 

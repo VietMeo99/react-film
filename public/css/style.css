@@ -8036,7 +8036,7 @@ header#headerv3-light {
   background-color: #0f2133;
   position: fixed;
   width: 100%;
-  z-index: 9999;
+  z-index: 100;
   -moz-opacity: 1;
   -khtml-opacity: 1;
   -webkit-opacity: 1;

@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-has-content */
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { lazy, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
@@ -96,9 +97,9 @@ const Header = () => {
                 </ul>
               </li>
               <li className="dropdown first">
-                <NavLink exact activeStyle={{// backgroundColor : 'white',
+                <NavLink activeStyle={{// backgroundColor : 'white',
                     color : 'red'}} 
-                    to="/" className="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+                    to="/movie" className="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
                   New<i className="fa fa-angle-down" aria-hidden="true" />
                 </NavLink>
                 <ul className="dropdown-menu level1">

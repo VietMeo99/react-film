@@ -2,11 +2,11 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import React, { useCallback } from 'react';
 import { BrowserRouter as Router } from "react-router-dom";
-import { ToastProvider, useToasts } from 'react-toast-notifications';
-
+import { useToasts } from 'react-toast-notifications';
 import 'react-alice-carousel/lib/alice-carousel.css';
 import "./styles/App.scss";
 import "./styles/app.less"; 
+import 'rodal/lib/rodal.css';
 import Footer from './modules/layout/Footer';
 import Header from './modules/layout/Header';
 import { ListRoutes, routes } from './modules/routes/Route';
@@ -45,22 +45,20 @@ function App() {
   useEffect(() => {
     const rs = api;
     console.log("rs : ", rs);
-    addToast('Saved Successfully', { appearance: 'success' })
+    // addToast('Saved Successfully', { appearance: 'success', autoDismiss : true })
     return () => {
-      addToast("error.message", { appearance: 'error' })
+      // addToast("error.message", { appearance: 'error' })
     }
   }, [])
   return (
     <div>
       <Router>
-        <ToastProvider>
-          <Header />
-          <React.Fragment>
-            {/* {renderRoutes(routes)}  */}
-            <ListRoutes />
-          </React.Fragment>
-          <Footer />
-        </ToastProvider>
+        <Header />
+        <React.Fragment>
+          {/* {renderRoutes(routes)}  */}
+          <ListRoutes />
+        </React.Fragment>
+        <Footer />
       </Router>
     </div>
   );
